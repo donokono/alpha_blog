@@ -1,13 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>AlphaBlog</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Jib Jab</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+<style>
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #666666;
+	margin:0 20%;
+}
+.header {
+		border-bottom:solid #000 1px;
+		margin-bottom:10px;
+}	
+.main {
+		
+}
+.left {
+
+	width:50%;
+ 	margin-bottom:10px;
+}
+.right {
+	float:right;
+	width:50%;
+ 
+		border-left:solid #000 1px;
+			margin-bottom:10px;
+}
+.content {
+	padding:20px;
+}
+
+.footer {
+clear:both;
+	padding:20px;
+	background-color:#00f;
+	color:#fff;
+	margin-top:20px;
+}
+</style>
 </head>
+
 <body>
+<div class="header">
+<h1 align="center">Welcome To Alpha Blog</h1>
+<p align="center"> <%= link_to image_tag('c_la.png'), '/' %> </p>
+</div>
+
+<div class="main">
+
+
 <%= render 'layouts/messages' %>
 <%= yield %>
+
+
+
+</div>
+
+<div class="footer">
+&copy;2017 BobCorp, Inc.
+</div>
+
 </body>
 </html>
