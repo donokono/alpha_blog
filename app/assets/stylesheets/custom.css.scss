@@ -1,2 +1,40 @@
+
+$body-bg: #252831;
+$text-color: #fff;
+$navbar-default-bg: #1dabdd;
+$navbar-default-color: #252831;
+$navbar-default-link-color: #252831;
+$navbar-border-radius: none;
+
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+.footer {
+  margin-top:30px;
+  height:50px;
+  background-color:#15ca92;
+  color:#252831;
+  line-height:50px;
+  font-size:11px;
+  font-weight:700;
+  text-align: center;
+}
+
+.header h1 {
+  margin:0 0 2rem 0;
+}
+.header small {
+  color:#797d86;
+  font-size:1.1rem;
+  padding-left:8px;
+  font-weight:700;
+}
+.center {
+  text-align:center;
+}
+
+.main-content h1 {
+  color:#15ca92;
+}
