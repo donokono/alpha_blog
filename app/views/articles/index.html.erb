@@ -14,6 +14,13 @@
         <%= truncate(article.description, length: 50) %>
         
       </p>
+      <small>Created by: <%= article.user.username if article.user  %>
+      <%= time_ago_in_words(article.created_at) %>  ago, last updated <%= time_ago_in_words(article.updated_at) %> ago.
+      
+      </small>
+      <p>
+        
+      </p>
 
       <p>
         <%= link_to "Edit this Article", edit_article_path(article), class: "btn btn-xs btn-primary" %> 
