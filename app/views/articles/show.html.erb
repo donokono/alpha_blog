@@ -3,8 +3,32 @@
   <div class="col-xs-12">
     <h1><%= @article.title %></h1>
     
-    <div class="well">
+
     
+    
+    <div class="well">
+      
+      <% if @article.user %>
+      
+            <div class="row">
+        <div class="col-md-1 center">
+          <%= link_to gravatar_for(@article.user, size: 80), user_path(@article.user) %>
+        </div>
+        <div class="col-md-11">
+           <p>
+            <small>
+            Created by:
+            </small>
+          </p>
+          <h3><%= link_to @article.user.username, user_path(@article.user) %></h3>
+          <p>
+            <small>
+            <%= pluralize(@article.user.articles.count, "article") if @article.user.articles %>
+            </small>
+          </p>
+        </div>
+    </div>
+            <% end %>
         <p>
          <%= simple_format(@article.description) %>
         </p>
