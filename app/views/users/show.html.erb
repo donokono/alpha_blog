@@ -1,0 +1,23 @@
+
+
+<div class="row">
+  <div class="col-md-2 center">
+    <%= gravitar_for @user, size: 120 %>
+  </div>
+  <div class="col-md-10">
+    <h1><%= @user.username %>'s Profile</h1>
+  </div>
+</div>
+    
+    
+<div class="row">
+  <div class="col-md-12">
+    
+    <h4><%= @user.username %>'s Articles</h4>
+    
+    <%= render 'articles/article', obj: @user.articles %>
+    
+  
+  </div>
+</div>
+  
