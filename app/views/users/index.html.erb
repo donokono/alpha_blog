@@ -21,6 +21,15 @@
         </div>
         <div class="col-md-8">
           <h3><%= link_to user.username, user_path(user) %></h3>
+          <% if logged_in? and current_user.admin? %>
+          <p>
+            <%= link_to "Delete User", user_path(user), 
+                method: :delete, 
+                data: { confirm: "This will delete the user and all of the articles they created. Are you sure?"},
+                class: "btn btn-xs btn-danger" %> 
+          </p>
+          <% end %>
+          
         </div>
         <div class="col-md-2">
           <%= pluralize(user.articles.count, "article") if user.articles %>
