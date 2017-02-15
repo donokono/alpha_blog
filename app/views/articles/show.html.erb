@@ -34,9 +34,11 @@
         </p>
         
         <p>
-          <%= link_to "Edit this Article", edit_article_path(@article), class: "btn btn-xs btn-primary" %> 
+          <% if logged_in? && current_user == @article.user %>
+            <%= link_to "Edit this Article", edit_article_path(@article), class: "btn btn-xs btn-primary" %> 
+            <%= link_to "Delete this Article", article_path(@article), class: "btn btn-xs btn-danger", method: :delete, data: {confirm: "Really delete?"} %>
+          <% end %>
           <%= link_to "View all Articles", articles_path, class: "btn btn-xs btn-info" %>
-          <%= link_to "Delete this Article", article_path(@article), class: "btn btn-xs btn-danger", method: :delete, data: {confirm: "Really delete?"} %>
         </p>
     
     </div>
